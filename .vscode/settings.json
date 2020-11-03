@@ -1,0 +1,36 @@
+{
+	"files.exclude": {
+        "out": true, // set this to true to hide the "out" folder with the compiled JS files
+        "**/*.pyc": true,
+        ".nyc_output": true,
+        "obj": true,
+        "bin": true,
+        "**/__pycache__": true,
+        "**/node_modules": true,
+        ".vscode-test": false,
+        ".vscode test": false,
+        "**/.mypy_cache/**": true,
+        "**/.ropeproject/**": true
+    },
+    "search.exclude": {
+        "out": true, // set this to false to include "out" folder in search results
+        "**/node_modules": true,
+        "coverage": true,
+        "languageServer*/**": true,
+        ".vscode-test": true,
+        ".vscode test": true
+    },
+	"[python]": {
+        "editor.formatOnSave": true
+    },
+	"python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+	"python.formatting.provider": "black",
+	"prettier.printWidth": 80,
+	"prettier.singleQuote": true,
+	"phabricator-links.url": "https://www.mypdns.org/",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.tslint": true
+	}
+}

@@ -1,0 +1,17 @@
+FROM centos:latest
+
+RUN dnf -y install python3 bind bind-utils pdns-backend-bind pdns-recursor
+
+WORKDIR /root
+
+COPY test/system/functions /etc/rc.d/init.d/functions
+RUN /usr/libexec/generate-rndc-key.sh
+
+COPY hosts2rpz.py /usr/local/bin/mypdns-hosts2rpz
+COPY test /root/test
+RUN /root/test/system/setup_centos.sh
+
+ENV NAMED_DIR=/var/named NAMED_USER=named
+RUN useradd -m -G $NAMED_USER unprivileged
+
+CMD ["/root/test/system/entrypoint.sh"]
