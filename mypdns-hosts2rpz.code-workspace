@@ -1,7 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name": "hosts2rpz"
 		}
 	],
 	"settings": {
