@@ -1,4 +1,4 @@
-# My Privacy DNS rpz-Import tool
+# My Privacy DNS hosts2rpz tool
 Block ads and malicious domains with response policy zones.
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DNS-RPZ/mypdns-hosts2rpz?sort=semver)
